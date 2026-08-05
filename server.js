@@ -14,6 +14,12 @@ app.use('/api/auth', authRoutes)
 const reportRoutes = require('./src/routes/report')
 app.use('/api/reports', reportRoutes)
 
+const alertRoutes = require('./src/routes/alert')
+app.use('/api/alerts', alertRoutes)
+
+const exploreRoutes = require('./src/routes/explore')
+app.use('/api/explore', exploreRoutes)
+
 app.get('/', (req, res) => {
   res.json({ message: 'Aruvix server is running!' })
 })
